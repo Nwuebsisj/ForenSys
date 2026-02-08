@@ -1,0 +1,4 @@
+psutil
+pandas
+PySide6
+google-generativeai
