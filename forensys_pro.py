@@ -8,12 +8,12 @@ import json
 import datetime
 import sqlite3
 import shutil
-import google.generativeai as genai
 from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                              QHBoxLayout, QPushButton, QTableWidget, QTableWidgetItem, 
                              QLabel, QHeaderView, QTabWidget, QLineEdit, QMessageBox)
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QColor
+from google import genai
 
 class ForenSysApp(QMainWindow):
     def __init__(self):
@@ -180,13 +180,22 @@ class ForenSysApp(QMainWindow):
 
     def get_ai_insight(self, filename, path):
         api_key = self.api_input.text().strip()
-        if not api_key: return "Provide API Key in Settings."
+        if not api_key: 
+            return "Provide API Key in Settings."
+            
         try:
-            genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-3-flash-preview')
-            prompt = f"Forensic check: File {filename} at {path}. Explain if safe or suspicious in 10 words."
-            return model.generate_content(prompt).text
-        except Exception as e: return f"AI Error: {e}"
+            client = genai.Client(api_key=api_key)
+            
+            prompt = f"Act as a Cyber Forensic Expert. Analyze: File {filename} at {path}. Is it safe or suspicious? 10 words max."
+  
+            response = client.models.generate_content(
+                model="gemini-2.5-flash-lite", 
+                contents=prompt
+            )
+            
+            return response.text
+        except Exception as e: 
+            return f"AI Error: {e}"
 
     def run_forensic_scan(self):
         self.reg_table.setRowCount(0)
@@ -248,4 +257,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = ForenSysApp()
     window.show()
+
     sys.exit(app.exec())
