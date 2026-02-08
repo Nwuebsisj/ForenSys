@@ -64,43 +64,43 @@ Click Select Folder.
 
 4. Activate the VENV:
 
-    • In the terminal, type: .\.venv\Scripts\activate
+        • In the terminal, type: .\.venv\Scripts\activate
 
 5. Set VS Code Interpreter:
 
-    • Press Ctrl + Shift + P.
-
-    • Search for "Python: Select Interpreter".
-
-    • Select the one labeled ('.venv': venv).
+        • Press Ctrl + Shift + P.
+    
+        • Search for "Python: Select Interpreter".
+    
+        • Select the one labeled ('.venv': venv).
 
 6. Install Requirements: pip install -r requirements.txt
    
 7. Getting your Gemini API Key (**Required**)
 The AI features require a Google Gemini API Key. It is free for developers:
 
-    • Visit Google AI Studio.
-
-    • Sign in with your Google Account.
-
-    • Click "Get API key" on the top left.
-
-    • Click "Create API key in new project".
-
-    • Copy the key.
+        • Visit Google AI Studio.
+    
+        • Sign in with your Google Account.
+    
+        • Click "Get API key" on the top left.
+    
+        • Click "Create API key in new project".
+    
+        • Copy the key.
 
 9. Run as Admin: * To access the Registry and Network data, VS Code must be running as Administrator. 
     Right-click the VS Code icon and select "Run as Administrator" before running the script: 
 
-    • Run the script: python ForenSys_Final.py
-
-    • Go to the Settings & Export tab.
-
-    • Paste your key into the API Key field.
-
-    • Click "Save API Key (Remember Me)".
-
-    • Go to the Persistence Scanner and click Run Forensic Scan.
+        • Run the script: python ForenSys_Final.py
+    
+        • Go to the Settings & Export tab.
+    
+        • Paste your key into the API Key field.
+    
+        • Click "Save API Key (Remember Me)".
+    
+        • Go to the Persistence Scanner and click Run Forensic Scan.
 
 📂 Project Structure
 
@@ -126,5 +126,6 @@ The AI features require a Google Gemini API Key. It is free for developers:
 This tool is for educational purposes. AI-generated insights should be used as leads for further investigation, not as absolute proof of malice.
 
         
+
 
 
