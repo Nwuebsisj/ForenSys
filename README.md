@@ -61,7 +61,9 @@ Click Select Folder.
 
 2. Open Terminal: Press Ctrl + ` (backtick) or go to Terminal > New Terminal.
 
-3. Create the VENV: Type the following command and hit Enter: python -m venv .venv
+3. Create the VENV: Type the following command and hit Enter: 
+
+        • python -m venv .venv
 
 4. Activate the VENV:
 
@@ -93,7 +95,7 @@ The AI features require a Google Gemini API Key. It is free for developers:
 9. **Run as Admin:** To access the Registry and Network data, VS Code must be running as **Administrator**. 
     Right-click the VS Code icon and select "Run as Administrator" before running the script: 
 
-        • Run the script: python ForenSys_Final.py
+        • Run the script: python forensys_pro.py
     
         • Go to the Settings & Export tab.
     
@@ -105,7 +107,7 @@ The AI features require a Google Gemini API Key. It is free for developers:
 
 📂 Project Structure
 
-    • ForenSys_Final.py: The main GUI application.
+    • forensys_pro.py: The main GUI application.
 
     • requirements.txt: List of Python dependencies.
 
