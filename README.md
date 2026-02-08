@@ -32,8 +32,9 @@ Exports all scan results into a time-stamped CSV report inside the /reports fold
 🚀 Setup Instructions (VS Code + Virtual Environment)
 It is highly recommended to use a Virtual Environment (venv). This keeps the project libraries separate from your global system, preventing version conflicts and ensuring the tool runs exactly as intended.
 
-=======Step-by-Step for VS Code Users:=====================
-Project structure after extracting folder: 
+=======Step-by-Step for VS Code Users:=====================================
+
+After extracting the ZIP file, ensure you have opened the **inner** folder in VS Code so that the structure looks like this:
 
 ForenSys/
 ├── modules/             # Prototypes and older scanner logic
@@ -57,24 +58,25 @@ Click Select Folder.
 
 1. Open Folder: Open the ForenSys folder in VS Code.
 
-2. VS Code "Easy Mode" Setup (**Recommended**)
-    The easiest way to set up ForenSys is using VS Code's built-in Environment Creator:
+2. Open Terminal: Press Ctrl + ` (backtick) or go to Terminal > New Terminal.
 
-    1.  Open the project folder in **VS Code**.
-    2.  Open the Command Palette: Press **`Ctrl + Shift + P`**.
-    3.  Type and select: **`Python: Create Environment...`**
-    4.  Choose **`Venv`** (Virtual Environment).
-    5.  Select your **Python Interpreter** (usually the latest version).
-    6.  **Crucial Step:** A list of files will appear. Check the box for **`requirements.txt`** and click **OK**.
+3. Create the VENV: Type the following command and hit Enter: python -m venv .venv
 
-VS Code will now automatically:
-    * Create your `.venv` folder.
-    * Activate it for you.
-    * Install all the libraries (PySide6, psutil, etc.).
-    
-**Run the App:** Open `ForenSys_Final.py` and click the **Run** button (or type `python ForenSys_Final.py` in the terminal).
+4. Activate the VENV:
+
+    • In the terminal, type: .\.venv\Scripts\activate
+
+5. Set VS Code Interpreter:
+
+    • Press Ctrl + Shift + P.
+
+    • Search for "Python: Select Interpreter".
+
+    • Select the one labeled ('.venv': venv).
+
+6. Install Requirements: pip install -r requirements.txt
    
-Getting your Gemini API Key (**Required**)
+7. Getting your Gemini API Key (**Required**)
 The AI features require a Google Gemini API Key. It is free for developers:
 
     • Visit Google AI Studio.
@@ -124,3 +126,4 @@ The AI features require a Google Gemini API Key. It is free for developers:
 This tool is for educational purposes. AI-generated insights should be used as leads for further investigation, not as absolute proof of malice.
 
         
+
