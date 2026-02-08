@@ -36,12 +36,12 @@ It is highly recommended to use a Virtual Environment (venv). This keeps the pro
 
 After extracting the ZIP file, ensure you have opened the **inner** folder in VS Code so that the structure looks like this:
 
-ForenSys/
-├── modules/             # Prototypes and older scanner logic
-├── ForenSys_Final.py    # THE MAIN APPLICATION
-├── README.md            # Documentation
-├── requirements.txt     # List of dependencies
-└── .gitignore           # Security file (hides API keys)
+    ForenSys/
+    ├── modules/             # Prototypes and older scanner logic
+    ├── ForenSys_Final.py    # THE MAIN APPLICATION
+    ├── README.md            # Documentation
+    ├── requirements.txt     # List of dependencies
+    └── .gitignore           # Security file (hides API keys)
 
 When you download this project as a ZIP from GitHub, the extraction process sometimes creates a "folder inside a folder" (e.g., ForenSys-main/ForenSys-main/).
 
@@ -126,4 +126,5 @@ The AI features require a Google Gemini API Key. It is free for developers:
 This tool is for educational purposes. AI-generated insights should be used as leads for further investigation, not as absolute proof of malice.
 
         
+
 
