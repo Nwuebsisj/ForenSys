@@ -1,5 +1,5 @@
 ForenSys - AI-Powered Digital Forensic Toolkit 🛡️
-ForenSys is a modern, lightweight digital forensics and incident response (DFIR) tool designed for security analysts and students. It automates the detection of malicious persistence, monitors live network communications, and traces the "Patient Zero" (root cause) of infections using the Gemini 3 Flash Preview AI model.
+ForenSys is a modern, lightweight digital forensics and incident response (DFIR) tool designed for security analysts and students. It automates the detection of malicious persistence, monitors live network communications, and traces the "Patient Zero" (root cause) of infections using the Gemini 2.5 Flash Lite AI model.
 
 ✨ Key Features
 1. Persistence Scanner (Registry Analysis)
@@ -10,7 +10,7 @@ Cross-references findings with a Local Knowledge Base to minimize false positive
 Performs PowerShell-based Authenticode Signature checks to verify file integrity.
 
 2. AI Forensic Insight
-Integrated with Gemini 3 Flash Preview.
+Integrated with Gemini 2.5 Flash Lite.
 
 Provides real-time, plain-English analysis of "High Risk" files that are unrecognized or unsigned.
 
@@ -30,7 +30,8 @@ Displays Process IDs (PID), process names, and remote destination addresses.
 Exports all scan results into a time-stamped CSV report inside the /reports folder.
 
 🚀 Setup Instructions (VS Code + Virtual Environment)
-It is highly recommended to use a Virtual Environment (venv). This keeps the project libraries separate from your global system, preventing version conflicts and ensuring the tool runs exactly as intended.
+It is highly recommended to use a Virtual Environment (venv).
+This keeps the project libraries separate from your global system, preventing version conflicts and ensuring the tool runs exactly as intended.
 
 =======Step-by-Step for VS Code Users:=====================================
 
@@ -89,7 +90,7 @@ The AI features require a Google Gemini API Key. It is free for developers:
     
         • Copy the key.
 
-9. Run as Admin: * To access the Registry and Network data, VS Code must be running as Administrator. 
+9. **Run as Admin:** To access the Registry and Network data, VS Code must be running as **Administrator**. 
     Right-click the VS Code icon and select "Run as Administrator" before running the script: 
 
         • Run the script: python ForenSys_Final.py
@@ -116,7 +117,7 @@ The AI features require a Google Gemini API Key. It is free for developers:
 
     • GUI: PySide6 (Qt for Python)
 
-    • AI: Google Generative AI (Gemini 3 Flash Preview)
+    • AI: Google Generative AI (Gemini 2.5 Flash Lite)
 
     • System Metrics: psutil
 
@@ -126,6 +127,7 @@ The AI features require a Google Gemini API Key. It is free for developers:
 This tool is for educational purposes. AI-generated insights should be used as leads for further investigation, not as absolute proof of malice.
 
         
+
 
 
 
