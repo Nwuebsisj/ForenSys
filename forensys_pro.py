@@ -186,7 +186,12 @@ class ForenSysApp(QMainWindow):
         try:
             client = genai.Client(api_key=api_key)
             
-            prompt = f"Act as a Cyber Forensic Expert. Analyze: File {filename} at {path}. Is it safe or suspicious? 10 words max."
+            prompt = (
+                f"Context: Windows Forensic Analysis. "
+                f"Task: Analyze if this auto-start entry is a common Windows process or a threat. "
+                f"Entry: {filename} at {path}. "
+                f"Rules: Identify known safe Microsoft paths. Explain in 10 words."
+            )
   
             response = client.models.generate_content(
                 model="gemini-2.5-flash-lite", 
@@ -259,3 +264,4 @@ if __name__ == "__main__":
     window.show()
 
     sys.exit(app.exec())
+
